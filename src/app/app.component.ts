@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { GreetingService } from 'src/services/greeting.service';
+import { Greeting } from 'src/model/greeting';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'test-angular-heroku-app';
+  public title = 'test-angular-heroku-app';
+  public userName: string = '';
+  public greetingText: Observable<Greeting>;
+
+  constructor(private greetingService: GreetingService) {}
+
+  public greetings() : void {
+
+    this.greetingText = this.greetingService.getGreetingsResponse(this.userName);
+  }
 }
