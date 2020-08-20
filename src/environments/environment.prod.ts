@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'http://damp-spire-33229.herokuapp.com'
+  apiUrl: 'https://murmuring-basin-43100.herokuapp.com'
 };
