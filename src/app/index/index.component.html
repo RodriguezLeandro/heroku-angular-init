@@ -1,0 +1,15 @@
+<div class="content" role="main">
+    <div class="greetings-title">
+      <span>Please insert your name and press the following button  </span>
+      <input type="text" placeholder="Please insert your name" [(ngModel)]="userName">
+    </div>
+    <div class="greetings-button">
+      <button (click)="greetings()">SAY HELLO</button>
+    </div>
+  
+    <div *ngIf="greetingText | async as Greeting">
+      <p> Your id is : {{ Greeting.id }}  </p>
+      <p> And {{ Greeting.content }} is our response </p>
+    </div>
+  
+</div>

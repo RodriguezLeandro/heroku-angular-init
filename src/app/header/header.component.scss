@@ -1,0 +1,21 @@
+.toolbar {
+    padding-left: 20px;
+    height: 60px;
+    margin: -8px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(33, 122, 206);
+    color: white;
+    font-weight: 600;
+    a {
+        color:white;
+    }
+}
+
+.spacer {
+    padding-left: 20px;
+}
+
+fa-icon {
+    cursor:pointer;
+}
