@@ -13,7 +13,7 @@ export class GreetingService {
 
   public getGreetingsResponse(name: string) : Observable<Greeting> {
 
-    const url = `${environment.apiUrl}/greeting?name=${name}`;
+    const url = `${environment.apiUrl}/greetings?name=${name}`;
 
     return this.http.get<Greeting>(url);
   }
